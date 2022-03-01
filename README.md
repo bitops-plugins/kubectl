@@ -1,2 +1,2 @@
-# bitops-kubectl-plugin
+# Bitops Kubectl Plugin
 BitOps Kubectl Plugin
