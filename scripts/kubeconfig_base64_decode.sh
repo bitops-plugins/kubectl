@@ -9,7 +9,7 @@ if [ -z "$KUBECONFIG_BASE64" ]; then
 fi
 
 # ensure dir exists
-KUBE_CONFIG_DIR="$(dirname "$KUBE_CONFIG_FILE")"
+KUBE_CONFIG_DIR="$(dirname "$BITOPS_KUBE_CONFIG_FILE")"
 if [ ! -d "$KUBE_CONFIG_DIR" ]; then
   mkdir -p "$KUBE_CONFIG_DIR"
 fi
