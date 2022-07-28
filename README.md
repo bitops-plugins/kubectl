@@ -1,34 +1,17 @@
 # Bitops Plugin for Kubectl
 
+## Table of contents
+
+1. [Introduction](#Introduction)
+2. [Installation](https://github.com/bitops-plugins/kubectl/blob/main/INSTALL.md)
+3. [Deployment](#Deployment)
+
+---
+
 ## Introduction
 This plugin will install ``kubectl`` cli.
 
-## Installation
 
-This plugin gets installed through ```bitops.config.yaml```.
-
-### Sample Config
-
-```
-bitops:
-  fail_fast: true 
-  run_mode: default
-  logging:      
-    level: DEBUG
-    color:
-      enabled: true
-    filename: bitops-run
-    err: bitops.logs
-    path: /var/logs/bitops
-  opsrepo_root_default_dir: _default
-  plugins:    
-    kubectl:
-      source: https://github.com/bitops-plugins/kubectl
-...
-...
-...
-
-```
 
 ## Deployment
 
