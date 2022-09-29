@@ -22,3 +22,5 @@ function install_kubectl() {
 
 install_kubectl
 
+# Verify the kubectl installation
+kubectl version
