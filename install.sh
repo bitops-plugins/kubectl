@@ -12,11 +12,15 @@ apk info
 mkdir -p /opt/download
 cd /opt/download
 
+LATEST_RELEASE=$(curl -Ss https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+KUBECTL_VERSION=${LATEST_RELEASE}
 
 function install_kubectl() {
-    wget https://amazon-eks.s3-us-west-2.amazonaws.com/1.13.7/2019-06-11/bin/linux/amd64/kubectl
+    wget --no-verbose https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl
     chmod +x ./kubectl && mv kubectl /usr/local/bin/
 }
 
 install_kubectl
 
+# Verify the kubectl installation
+kubectl version --client
