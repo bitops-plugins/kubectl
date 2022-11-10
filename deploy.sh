@@ -1,8 +1,7 @@
 #!/bin/bash
 set -ex
 
-SANITIZED_KUBECTL_SKIP_DEPLOY=$(echo "$KUBECTL_SKIP_DEPLOY" | tr '[:upper:]' '[:lower:]')
-if [ "$SANITIZED_KUBECTL_SKIP_DEPLOY" == "true" ]; then
+if [ "$KUBECTL_SKIP_DEPLOY" == "true" ]; then
   echo "KUBECTL_SKIP_DEPLOY is set.  Skipping."
   exit 0
 fi
